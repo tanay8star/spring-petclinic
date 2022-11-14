@@ -18,7 +18,13 @@ pipeline {
 
     stage('run') {
       steps {
-        sh 'mvn spring-boot:run'
+        sh 'mvn clean package'
+      }
+    }
+
+    stage('') {
+      steps {
+        sh 'cp target/petclinic.jar ./vagrant/'
       }
     }
 
