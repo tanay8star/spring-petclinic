@@ -22,9 +22,9 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
-        sh 'cp target/petclinic.jar ./vagrant/'
+        sh 'cp /var/lib/jenkins/workspace/spring-petclinic_main/target/spring-petclinic-2.7.3.jar /vagrant/'
       }
     }
 
