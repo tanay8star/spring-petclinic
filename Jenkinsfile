@@ -22,9 +22,15 @@ pipeline {
       }
     }
 
-    stage('error') {
+    stage('copy jar') {
       steps {
         sh 'cp /var/lib/jenkins/workspace/spring-petclinic_main/target/spring-petclinic-2.7.3.jar /vagrant/'
+      }
+    }
+
+    stage('run ansible') {
+      steps {
+        sh 'ansible-playbook springboot.yaml'
       }
     }
 
