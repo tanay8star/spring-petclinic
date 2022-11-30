@@ -30,7 +30,7 @@ pipeline {
 
     stage('run ansible') {
       steps {
-        sh 'ansible-playbook springboot.yaml'
+        sh 'ansible-playbook /vagrant/springboot.yaml'
       }
     }
 
