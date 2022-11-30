@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('run ansible') {
       steps {
-        sh 'ansible-playbook /vagrant/springboot.yaml --ask-pass'
+        sh '''ansible-playbook /vagrant/springboot.yaml --ask-pass
+echo "vagrant"'''
       }
     }
 
